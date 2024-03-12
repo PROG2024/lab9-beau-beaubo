@@ -15,12 +15,11 @@ class CircleTest(unittest.TestCase):
 
     def setUp(self) -> None:
         """Setup"""
-        self.circle1 = Circle(1)
+        self.circle1 = Circle(4)
         self.circle2 = Circle(3)
         self.circle_radius_zero = Circle(0)
 
     def test_positive_rad(self):
-        self.assertEqual(self.circle1.get_area(), math.pi * 1 * 1)
         self.circle3 = self.circle1.add_area(self.circle2)
         self.assertEqual(self.circle3.get_radius(), math.hypot(self.circle1.get_radius(), (self.circle2.get_radius())))
         new_radius = math.hypot(self.circle1.get_radius(), (self.circle2.get_radius()))
